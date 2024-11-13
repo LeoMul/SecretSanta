@@ -8,7 +8,11 @@ python3 main_secretsanta.py
 ```
 will print out an empty input. This can be piped into a file to be filled in with 
 ```
-python3 main_secretsanta.py > input.json 
+python3 main_secretsanta.py > {your_input_name}.json 
+```
+Having filled in the input, run using:
+```
+python3 main_secretsanta.py --json {your_input_name}.json 
 ```
 The input fields are as follows:
 ```
