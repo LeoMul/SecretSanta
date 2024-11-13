@@ -11,20 +11,13 @@ parser.add_argument('-j', '--json',  help='path of json')
 args = parser.parse_args()
 
 def main(input:Input):
-    gmail_user = input.gmail_login
-    gmail_password = input.gmail_passkey
-
-    
-    send_emails = input.send_emails
-    test_flag = input.test_flag
-    reveal_names = input.reveal_names
 
     print(constants.block)
     nameinput,emailinput = readin.readin_from_excel(input.list_of_emails)
     print(constants.block)
     assigned_names = drawing_names.draw_until_noone_has_themselves(nameinput)
     print(constants.block)
-    if reveal_names:
+    if input.reveal_names:
         drawing_names.reveal_names(nameinput,assigned_names)
 
     emailing_people.distribute_names(
